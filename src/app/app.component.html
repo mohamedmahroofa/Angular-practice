@@ -1,5 +1,15 @@
 <h1>Hero Land Headquarters</h1>
-<app-hero-card [heroName]="'Bat Man'"></app-hero-card>
-<app-hero-card [heroName]="'Super Man'"></app-hero-card>
-<app-hero-card [heroName]="'Nightwing'"></app-hero-card>
-<app-hero-card [heroName]="'Shazam'"></app-hero-card>
+
+
+<div>
+  <input type="text" placeholder="Enter a name" #newHeroName>
+
+  <button (click)="addHero(newHeroName.value); newHeroName.value = ''">Recruit Hero</button>
+</div>
+
+
+<div class="hero-container">
+  @for(name of myHeroes(); track name){
+  <app-hero-card [heroName]="name" (fireHero)="removeHero(name)"></app-hero-card>
+}
+</div>

@@ -8,3 +8,19 @@
   width: 200px;
   display: inline-block;
 }
+
+.btn-fire {
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  margin-top: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  display: block; /* Put it on its own line */
+  width: 100%;
+}
+
+.btn-fire:hover {
+  background-color: #cc0000;
+}

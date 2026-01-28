@@ -1,3 +1,13 @@
 <div class="card">
   <h3>Hero Name: {{heroName}}</h3>
+  <p>Power Level: {{powerLevel()}}</p>
+
+  <button (click)="increasePower()">Power Up!</button>
+
+  <button class="btn-fire" (click)="onFireClick()">Fire Hero</button>
+
+  @if(powerLevel() > 50){
+  <p style="color: yellow; font-weight: bold;">⚠️ MEGA HERO DETECTED! ⚠️</p>
+}
 </div>
+
